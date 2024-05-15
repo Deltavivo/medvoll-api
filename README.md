@@ -33,7 +33,7 @@ API com CRUD de medicos e pacientes, garantindo segurança através da authentic
 - Utilizar a biblioteca Auth0 java-jwt para realizar a validação dos tokens recebidos na API
 - Realizar o processo de autenticação da requisição, utilizando a classe SecurityContextHolder, do Spring
 - Liberar e restringir requisições, de acordo com a URL e o verbo do protocolo HTTP
-- Documentação da API
+- Documentação da API (SpringDoc)
 - Testes automatizados
 - Implementacao de consulta JPQL (Java Persistence Query Language)
 - Utilizacao dos princípios SOLID para deixar o código da funcionalidade de agendamento mais fácil de entender, evoluir e testar
