@@ -15,7 +15,7 @@ public record DadosCadastroMedicoDTO(
 //      Outra possiblidade de alterar as mensgens
 //        @NotBlank(message = "Email é obrigatório")
 //        @Email(message = "Formato do email é inválido")
-        
+
         @NotBlank(message = "{email.obrigatorio}")
         @Email(message = "{email.invalido}")
         String email,
