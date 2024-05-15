@@ -20,6 +20,25 @@ API com CRUD de medicos e pacientes, garantindo segurança através da authentic
 
 
 
+## Temas encontrados no projeto
+
+- Desenvolvimento de uma API Rest
+- CRUD (Create, Read, Update e Delete)
+- Validações
+- Paginação e ordenação
+- Boas práticas Rest
+- Tratamento de erros
+- Controle de acesso com JWT
+- Funcionam os Filters em uma requisição;
+- Utilizar a biblioteca Auth0 java-jwt para realizar a validação dos tokens recebidos na API
+- Realizar o processo de autenticação da requisição, utilizando a classe SecurityContextHolder, do Spring
+- Liberar e restringir requisições, de acordo com a URL e o verbo do protocolo HTTP
+- Documentação da API
+- Testes automatizados
+- Implementacao de consulta JPQL (Java Persistence Query Language)
+- Utilizacao dos princípios SOLID para deixar o código da funcionalidade de agendamento mais fácil de entender, evoluir e testar
+
+
 ## Ponto alto, recordar como funciona o Java Web para intersecção das chamadas utilizando filtros:
 
  <img class="img" src="https://imgur.com/a/q1i0OQ3" />
