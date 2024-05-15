@@ -16,6 +16,12 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
 
+import java.util.List;
+
+
+//Validar por perfil para os metodos é necessario incluir anotacao na classe tambem
+//@EnableMethodSecurity(securedEnabled = true)
+
 @RestController
 @RequestMapping("medicos")
 public class MedicoController {
@@ -32,6 +38,7 @@ public class MedicoController {
         return ResponseEntity.created(uri).body(new DadosDetalhamentoMedicoDTO(medico));
     }
 
+    // Metodo sem paginacao
 //    @GetMapping
 //    public List<DadosListagemMedicoDTO> listar(){
 //        return repository.findAll().stream().map(DadosListagemMedicoDTO::new).toList();
@@ -53,6 +60,9 @@ public class MedicoController {
         medico.atualizarInformacoes(dados);
         return ResponseEntity.ok(new DadosDetalhamentoMedicoDTO(medico));
     }
+
+    //Restricao por perfil do metodo por anotacao
+    //@Secured("ROLE_ADMIN")
 
     @DeleteMapping("/{id}")
     @Transactional
