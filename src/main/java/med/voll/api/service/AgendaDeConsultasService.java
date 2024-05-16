@@ -1,14 +1,14 @@
 package med.voll.api.service;
 
 import med.voll.api.domain.validacoes.ValidadorAgendamentoDeConsultas;
-import med.voll.api.dto.DadosAgendamentoConsultaDTO;
+import med.voll.api.domain.dto.DadosAgendamentoConsultaDTO;
 import med.voll.api.domain.ValidacaoException;
-import med.voll.api.dto.DadosDetalhamentoConsultaDTO;
-import med.voll.api.model.Consulta;
-import med.voll.api.model.Medico;
-import med.voll.api.repository.ConsultaRepository;
-import med.voll.api.repository.MedicoRepository;
-import med.voll.api.repository.PacienteRepository;
+import med.voll.api.domain.dto.DadosDetalhamentoConsultaDTO;
+import med.voll.api.domain.model.Consulta;
+import med.voll.api.domain.model.Medico;
+import med.voll.api.domain.repository.ConsultaRepository;
+import med.voll.api.domain.repository.MedicoRepository;
+import med.voll.api.domain.repository.PacienteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

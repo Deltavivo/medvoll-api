@@ -1,8 +1,8 @@
-package med.voll.api.dto;
+package med.voll.api.domain.dto;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.validation.constraints.Future;
-import med.voll.api.model.Especialidade;
+import med.voll.api.domain.model.Especialidade;
 import org.jetbrains.annotations.NotNull;
 
 import java.time.LocalDateTime;

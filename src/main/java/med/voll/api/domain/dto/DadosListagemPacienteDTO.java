@@ -1,6 +1,6 @@
-package med.voll.api.dto;
+package med.voll.api.domain.dto;
 
-import med.voll.api.model.Paciente;
+import med.voll.api.domain.model.Paciente;
 
 public record DadosListagemPacienteDTO(Long id, String nome, String email, String cpf) {
 

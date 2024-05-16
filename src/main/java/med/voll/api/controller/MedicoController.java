@@ -2,12 +2,12 @@ package med.voll.api.controller;
 
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.validation.Valid;
-import med.voll.api.dto.DadosAtualizarMedicoDTO;
-import med.voll.api.dto.DadosCadastroMedicoDTO;
-import med.voll.api.dto.DadosDetalhamentoMedicoDTO;
-import med.voll.api.dto.DadosListagemMedicoDTO;
-import med.voll.api.model.Medico;
-import med.voll.api.repository.MedicoRepository;
+import med.voll.api.domain.dto.DadosAtualizarMedicoDTO;
+import med.voll.api.domain.dto.DadosCadastroMedicoDTO;
+import med.voll.api.domain.dto.DadosDetalhamentoMedicoDTO;
+import med.voll.api.domain.dto.DadosListagemMedicoDTO;
+import med.voll.api.domain.model.Medico;
+import med.voll.api.domain.repository.MedicoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -16,8 +16,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
-
-import java.util.List;
 
 
 //Validar por perfil para os metodos é necessario incluir anotacao na classe tambem
