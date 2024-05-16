@@ -41,9 +41,7 @@ API com CRUD de medicos e pacientes, garantindo segurança através da authentic
 
 ## Ponto alto, recordar como funciona o Java Web para intersecção das chamadas utilizando filtros:
 
- <img class="img" src="https://imgur.com/a/q1i0OQ3" />
-
-
+![Filters]("https://imgur.com/a/q1i0OQ3")
 
 ## Técnicas e tecnologias utilizadas:
 
@@ -57,3 +55,61 @@ API com CRUD de medicos e pacientes, garantindo segurança através da authentic
 - ``Lombok;``
 - ``Flyway;``
 - ``MySql;``
+
+
+## Alternativa caso queira utilizar empacotamento do tipo war na aplicacao
+
+- Incluir a tag
+
+~~~
+<packaging>war</packaging>
+~~~
+
+- Incluir a dependencia
+
+~~~
+<dependency>
+<groupId>org.springframework.boot</groupId>
+<artifactId>spring-boot-starter-tomcat</artifactId>
+<scope>provided</scope>
+</dependency>
+~~~
+
+- Sobreescrever o metodo principal
+
+~~~
+@SpringBootApplication
+public class ApiApplication extends SpringBootServletInitializer {
+
+@Override
+protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+return application.sources(ApiApplication.class);
+}
+
+public static void main(String[] args) {
+SpringApplication.run(ApiApplication.class, args);
+}
+
+}
+~~~
+
+## Utilizar Native Image com Spring Boot 3 ( como  Micronaut e Quarkus utilizam de gerar um binario da aplicacao)
+
+- Incluir dependencia
+
+~~~
+<plugin>
+  <groupId>org.graalvm.buildtools</groupId>
+  <artifactId>native-maven-plugin</artifactId>
+</plugin>
+~~~
+
+- Após isso, a geração da imagem deve ser feita via terminal, com o seguinte comando Maven sendo executado no diretório raiz do projeto:
+
+~~~
+./mvnw -Pnative native:compile
+~~~
+
+- **** IMPORTANTE ****
+
+Atenção! Para executar o comando anterior e gerar a imagem nativa do projeto, é necessário que você tenha instalado em seu computador o GraalVM (máquina virtual Java com suporte ao recurso de Native Image) em uma versão igual ou superior a 22.3.
